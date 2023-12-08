@@ -1,8 +1,8 @@
 #Copy the output of the command get-process in running.txt
 
-#Set path of running.txt
+#Set path 
 $path = "$env:UserProfile\Desktop\running.txt"
-#if exist file remove it and create it again
+#if file exist remove it and create it again
 if (Test-Path $path) {
      Remove-Item $path
      Get-Process | Out-File -FilePath $path
